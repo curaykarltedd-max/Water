@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save Water, Save Our Future</title>
+
+<style>
+:root {
+  --blue: #087eae;
+  --dark: #073b58;
+  --green: #278b45;
+  --light: #eaf8ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2fbff;
+  color: var(--dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 15px #00000010;
+}
+
+nav {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 30%, #70dafa, transparent 30%),
+    linear-gradient(130deg, #087eae, #159bd0, #064d7d);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #c8ff9e;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 550px;
+}
+
+.hero-image {
+  text-align: center;
+  font-size: 190px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 27px;
+  border-radius: 30px;
+  background: white;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 75px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  color: #627687;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image {
+  background: linear-gradient(135deg, #c8f2ff, #dfffe2);
+  border-radius: 25px;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  font-size: 140px;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: #627687;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* TIPS */
+
+.tips-section {
+  background: var(--light);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 27px 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #12304710;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px #12304720;
+}
+
+.card .icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #627687;
+  line-height: 1.6;
+}
+
+/* IMPACT */
+
+.impact-box {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px #12304710;
+}
+
+.impact-box ul {
+  list-style: none;
+  line-height: 2.5;
+  color: #526777;
+}
+
+.impact-box li::before {
+  content: "✓ ";
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  text-align: center;
+  background: linear-gradient(120deg, #063c62, #087eae);
+  color: white;
+}
+
+.cta h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: #d8efff;
+}
+
+.cta button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#message {
+  margin-top: 18px;
+  color: #c8ff9e;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background: #052f4a;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: .7s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-image {
+    font-size: 130px;
+  }
+}
+
+@media(max-width: 550px) {
+  nav {
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 29px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <div class="logo">💧 SAVE WATER</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#impact">Impact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div>
+      <h1>SAVE WATER,<br><span>SAVE OUR FUTURE.</span></h1>
+      <p>
+        Every drop matters. Use water responsibly,
+        minimize unnecessary consumption, and help
+        protect our planet for the next generation.
+      </p>
+      <a href="#tips" class="button">Discover How →</a>
+    </div>
+
+    <div class="hero-image">💧🌎</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container about">
+    <div class="about-image reveal">🌊</div>
+
+    <div class="about-text reveal">
+      <h2>Why Should We Save Water?</h2>
+      <p>
+        Water is essential for every living thing.
+        However, wasting water threatens our environment
+        and reduces the resources available for future
+        generations.
+      </p>
+      <p>
+        By conserving water, we help protect nature,
+        support communities, and create a better
+        tomorrow.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WATER-SAVING TIPS -->
+
+<section class="tips-section" id="tips">
+  <div class="container">
+
+    <div class="section-title reveal">
+      <h2>Simple Ways to Save Water</h2>
+      <p>Small actions can make a big difference.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card reveal">
+        <div class="icon">🚰</div>
+        <h3>Turn Off Faucets</h3>
+        <p>Turn off the tap while brushing your teeth or washing dishes.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🚿</div>
+        <h3>Take Shorter Showers</h3>
+        <p>Reduce shower time to avoid unnecessary water consumption.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🔧</div>
+        <h3>Fix Water Leaks</h3>
+        <p>Repair leaking faucets and pipes to prevent water waste.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🪣</div>
+        <h3>Reuse Water</h3>
+        <p>Reuse suitable water for plants and cleaning.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🌱</div>
+        <h3>Water Plants Wisely</h3>
+        <p>Water plants early in the morning or late in the afternoon.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🧺</div>
+        <h3>Wash Full Loads</h3>
+        <p>Use washing machines efficiently by washing full loads.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🥤</div>
+        <h3>Avoid Water Waste</h3>
+        <p>Use only the amount of water you actually need.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">📢</div>
+        <h3>Spread Awareness</h3>
+        <p>Encourage others to practice water conservation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+
+<section id="impact">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>The Impact of Saving Water</h2>
+      <p>Every drop contributes to a healthier planet.</p>
+    </div>
+
+    <div class="impact-box reveal">
+      <ul>
+        <li>Protect marine life and ecosystems.</li>
+        <li>Conserve natural resources.</li>
+        <li>Help ensure access to clean water.</li>
+        <li>Support communities and future generations.</li>
+        <li>Promote responsible environmental habits.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta" id="action">
+  <div class="container">
+    <h2>Be Part of the Change!</h2>
+    <p>A small change today can make a big difference tomorrow.</p>
+
+    <button class="button" onclick="makePledge()">
+      💧 I Pledge to Save Water
+    </button>
+
+    <div id="message"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>💧 Save Water, Save Our Future</p>
+  <p>Together, let's conserve water for a greener tomorrow.</p>
+  <p>#SaveWater #EveryDropCounts</p>
+</footer>
+
+<script>
+
+// MOBILE-FRIENDLY SCROLL REVEAL
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+// WATER CONSERVATION PLEDGE
+
+let pledged = false;
+
+function makePledge() {
+  pledged = !pledged;
+
+  document.getElementById("message").textContent =
+    pledged
+      ? "Thank you! You are now part of the movement! 💚"
+      : "You can make your pledge again anytime.";
+}
+
+</script>
+
+</body>
+</html>
